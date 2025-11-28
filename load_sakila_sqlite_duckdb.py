@@ -17,6 +17,9 @@ os.environ["DESTINATION__DUCKDB__CREDENTIALS__DATABASE"] = str(DUCKDB_PATH)
 source = sql_database(
     credentials=f"sqlite:///{SQLITE_PATH}",
     schema="main"   
+# sqlite need for identify which kind of file 
+# :/// means local file
+#  {SQLITE_PATH} is the path to the db
 )
 
 # --- Create a pipeline ---

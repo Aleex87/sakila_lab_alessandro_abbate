@@ -12,3 +12,4 @@ Created the python file load_sakila_sqlite_duckdb for loading the data.
 Then I started the virtual envirment with uv init
 I have add ipykernel and dlt[sql_dtatbase]'
 Writed code in load-sakilasqlite for load the data 
+--- dlt (data load tool) tool of etl (extract tranform load)
