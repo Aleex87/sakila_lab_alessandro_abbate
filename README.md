@@ -13,3 +13,4 @@ Then I started the virtual envirment with uv init
 I have add ipykernel and dlt[sql_dtatbase]'
 Writed code in load-sakilasqlite for load the data 
 --- dlt (data load tool) tool of etl (extract tranform load)
+Created a new foder sql in the root and inside created eda_pandas_duckdb.ipynb for the manipulation of the database and the manager reqests. 
