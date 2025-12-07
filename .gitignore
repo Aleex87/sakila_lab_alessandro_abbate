@@ -213,3 +213,6 @@ __marimo__/
 # sqlite
 *.db
 .evidence
+data/*.tmp
+data/sakila.duckdb.tmp/
+*.tmp
