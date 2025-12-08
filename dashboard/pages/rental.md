@@ -43,6 +43,10 @@ LIMIT 5;
 
 ---
 
+# Whic store have more rental?
+
+--- 
+
 ```sql rentals_per_store
 SELECT 
     s.store_id,
@@ -59,4 +63,27 @@ ORDER BY rental_count DESC;
     data={rentals_per_store}
     x="store_id"
     y="rental_count"
+/>
+
+--- 
+
+# Montly Rental Trend 
+
+---
+
+```sql montly_rental
+SELECT 
+    DATE_TRUNC('month', rental_date) AS month,
+    COUNT(*) AS rentals
+FROM sakila.rental
+WHERE rental_date BETWEEN '2005-05-01' AND '2006-02-28'
+GROUP BY month
+ORDER BY month;
+```
+
+<LineChart 
+    title="Monthly Rentals "
+    data={montly_rental}
+    x="month"
+    y="rentals"
 />

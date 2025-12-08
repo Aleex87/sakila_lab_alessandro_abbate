@@ -2,55 +2,71 @@
 title: Sakila Dashboard
 ---
 
-## Sakila Rentals Dashboard Overview
+# Sakila Rental Dashboard
 
-Welcome to the dashboard dedicated to the analysis of the **Sakila** database,  
-a dataset representing a movie rental store and its operations.
-
-This report includes interactive visualizations and insights on:
-
-- Film inventory and category analysis  
-- Customer behavior and spending  
-- Rental activity and geographic trends  
-- Revenue analysis over time  
-- A full overview of the database structure  
+Welcome to the analytical dashboard for the **Sakila** database.  
+Use the dropdown menu below to navigate between insights.
 
 ---
 
-## 📊 Navigation Menu
+##  Navigation Menu
 
-Use the links below to explore the dashboard:
+<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+}
 
-### 🔹 Film Analysis  
-Explore film categories, ratings, duration distribution  
-**[Go to Film Analysis](/film)**
+.dropdown-button {
+  background-color: #22262fff;
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 220px;
+  box-shadow: 0px 6px 12px rgba(255, 241, 241, 0.15);
+  border-radius: 6px;
+  z-index: 5;
+}
+
+.dropdown-content a {
+  color: #22262cff;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+}
+
+.dropdown-content a:hover {
+  background-color: #606574ff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdown-button {
+  background-color: #070808ff;
+}
+</style>
+
+<div class="dropdown">
+  <button class="dropdown-button"> Open Dashboard Sections</button>
+  <div class="dropdown-content">
+    <a href="/film"> Film Analysis</a>
+    <a href="/customer"> Customer Analysis</a>
+    <a href="/rental"> Rental Analysis</a>
+    <a href="/overview"> Database Overview</a>
+  </div>
+</div>
 
 ---
-
-### 🔹 Customer Analysis  
-View top customers and spending behavior  
-**[Go to Customer Analysis](/customer)**
-
----
-
-### 🔹 Rental Analysis  
-Explore rental activity by city and store  
-**[Go to Rental Analysis](/rentals)**
-
----
-
-### 🔹 Database Overview  
-See all tables and sample data  
-**[Go to Database Overview](/data)**
-
----
-
-## Project Information
-
-This dashboard is powered by:
-
-- **DuckDB** as the analytical database  
-- **Evidence** for visualization and reporting  
-- **Python / Pandas** for initial exploration in the Jupyter Notebook  
-
-
