@@ -39,16 +39,9 @@ Explore rental activity by city and store
 
 ---
 
-### 🔹 Revenue Analysis  
-Track revenue by category and month  
-**[Go to Revenue Analysis](/revenue)**
-
----
-
 ### 🔹 Database Overview  
 See all tables and sample data  
 **[Go to Database Overview](/data)**
-
 
 ---
 
