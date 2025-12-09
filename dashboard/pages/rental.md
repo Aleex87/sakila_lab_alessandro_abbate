@@ -42,6 +42,14 @@ LIMIT 5;
 />
 
 ---
+<script>
+    let store_choice = "1";
+</script>
+
+
+---
+
+
 
 # Whic store have more rental?
 
