@@ -21,7 +21,7 @@ FROM sakila.rental;
 
 ---
 
-# Top 5 Cityes by number of rentals
+## Top 5 Cityes by number of rentals
 
 ```sql top_cityes
 SELECT 
@@ -41,19 +41,12 @@ LIMIT 5;
     y="rental_count"
 />
 
----
-<script>
-    let store_choice = "1";
-</script>
-
 
 ---
 
 
+## Whic store have more rental?
 
-# Whic store have more rental?
-
---- 
 
 ```sql rentals_per_store
 SELECT 
@@ -75,9 +68,8 @@ ORDER BY rental_count DESC;
 
 --- 
 
-# Montly Rental Trend 
+## Montly Rental Trend 
 
----
 
 ```sql montly_rental
 SELECT 
@@ -95,3 +87,6 @@ ORDER BY month;
     x="month"
     y="rentals"
 />
+
+## Customer & Rental Activity Overview
+This page shows the total number of customers in the database and confirms that there are two active stores. We identify the cities with the highest film-rental activity and determine which store has rented out the most films. The analysis also highlights that the database contains limited non-zero entries for rental counts; however, based on the available data, rental activity peaks in the months of July and August.

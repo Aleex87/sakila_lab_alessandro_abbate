@@ -1,15 +1,11 @@
----
-title: Film Analysis
----
-
-# 🎥 Film Analysis
+## Film Analysis
 
 This page explores the film dataset from the Sakila database.  
-Below you will find a few metadata yhey  the tabel film holds in. 
+Below you will find a few metadata that the tabel film holds in. 
 
 ---
 
-## 📌 Sample of Films
+## Sample of Films
 
 ```sql films_sample
 SELECT film_id, title, release_year, rating, length, rental_rate
@@ -18,9 +14,8 @@ LIMIT 10;
 ```
 ---
 
-Now we can look at which film categories are in this database and how many film hold every category.
+## We can also examine the film categories included in the database and determine how many films belong to each category.
 
----
 ```sql film_category 
 SELECT 
     c.name AS category,
@@ -41,7 +36,7 @@ ORDER BY film_count DESC;
    />
 
 
-# Now we can look at the film rating and how many film there are in each reating type:
+## Now we can look at the film ratings and see how many films fall into each rating category.
 
 ```sql reating
 SELECT rating, COUNT(*) AS number_of_film
@@ -57,3 +52,4 @@ ORDER BY number_of_film DESC;
    y=number_of_film
    />
    
+The Sakila dataset provides a rich collection of film-related attributes, including titles, lengths, rental costs, and production years. Analysis of the dataset shows that Sports films emerge as the most frequently rented genre, indicating a strong customer preference for this category.
