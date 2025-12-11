@@ -2,14 +2,14 @@
 title: Rental Analysis
 ---
 
-# 🎬 Rental Analysis
+# Rental Analysis
 
 This page explores rental activity across stores, customers, and cities.  
 These insights help identify where demand is highest and how rentals evolve over time.
 
 ---
 
-## 📌 Rental Activity Overview
+## Rental Activity Overview
 
 ```sql rentals_overview
 SELECT 
