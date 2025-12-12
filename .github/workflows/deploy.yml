@@ -31,11 +31,9 @@ jobs:
 
       - name: Build Evidence (sources + build)
         working-directory: dashboard
-        env:
-          PUBLIC_PATH: "/sakila_lab_alessandro_abbate/"
         run: |
           npm run sources
-          npm run build
+          npx evidence build --base-path /sakila_lab_alessandro_abbate/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
