@@ -34,15 +34,16 @@ jobs:
         env:
           BASE_PATH: "/sakila_lab_alessandro_abbate"
           EVIDENCE_BASE_PATH: "/sakila_lab_alessandro_abbate"
-          EVIDENCE_BUILD_DIR: "./build/sakila_lab_alessandro_abbate"
         run: |
           npm run sources
           npm run build
 
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dashboard/build/sakila_lab_alessandro_abbate
+          path: dashboard/build
+
 
   deploy:
     environment:
