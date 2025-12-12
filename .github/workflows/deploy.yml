@@ -33,7 +33,7 @@ jobs:
         working-directory: dashboard
         run: |
           npm run sources
-          npx evidence build --base-path /sakila_lab_alessandro_abbate/
+          npx evidence build --base /sakila_lab_alessandro_abbate/
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
