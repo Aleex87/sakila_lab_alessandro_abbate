@@ -1,0 +1,54 @@
+name: Deploy Evidence Dashboard to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        working-directory: dashboard
+        run: npm install
+
+      - name: Build Evidence (sources + build)
+        working-directory: dashboard
+        env:
+          BASE_PATH: "/sakila_lab_alessandro_abbate"
+          EVIDENCE_BASE_PATH: "/sakila_lab_alessandro_abbate"
+          EVIDENCE_BUILD_DIR: "./build/sakila_lab_alessandro_abbate"
+        run: |
+          npm run sources
+          npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard/build/sakila_lab_alessandro_abbate
+
+  deploy:
+    environment:
+      name: github-pages
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
