@@ -69,11 +69,14 @@ Use the dropdown menu below to navigate between insights.
   </div>
 </div>
 
-
-
-
 ---
 
 
+## Entity Relationship Diagram (ERD) on sakila database
 
+![Sakila ERD](/sakila_erd.png)
+
+
+The **ERD** diagram helps us understand the structure of the dataset, clarifying the relationships, joins, and selection paths used to extract information.
+It also provides a solid foundation for further analysis, enabling us to efficiently retrieve any additional insights required.
 
