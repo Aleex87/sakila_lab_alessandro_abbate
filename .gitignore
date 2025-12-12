@@ -208,7 +208,7 @@ __marimo__/
 
 # duckdb
 *.wal
-*.duckdb
+#*.duckdb
 
 # sqlite
 *.db

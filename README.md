@@ -10,3 +10,9 @@ I have add ipykernel and dlt[sql_dtatbase]'
 Writed code in load-sakilasqlite for load the data 
 --- dlt (data load tool) tool of etl (extract tranform load)
 Created a new foder sql in the root and inside created eda_pandas_duckdb.ipynb for the manipulation of the database and the manager reqests. 
+
+
+
+At the end of the project i have deployed the evidence dashboard using Netlify and this is the lik where you can see my project with no need to install any packeg.
+## Live Dashboard
+https://bucolic-moonbeam-9b49b8.netlify.app
